@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    margin-left: 150px;
+    overflow: hidden;
+    background-color: #252525;
+    /* background-image: url(imgs/sunnyFlowers.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Search bar start*/
+#header {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 18px;
+    margin-right: 200px;
+}
+
+.inputContainer {
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+}
+
+.inputContainer input#search {
+    width: 50px;
+    height: 52px;
+    background: #343a47;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #363636;
+    padding-left: 35px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+
+    -webkit-transition: width .55s ease;
+    -moz-transition: width .55s ease;
+    -ms-transition: width .55s ease;
+    -o-transition: width .55s ease;
+    transition: width .55s ease;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.inputContainer input#search::-webkit-input-placeholder {
+    color: #72808b;
+}
+
+.inputContainer input#search:-moz-placeholder {
+    color: #72808b;
+}
+
+.inputContainer input#search::-moz-placeholder {
+    color: #72808b;
+}
+
+.inputContainer input#search:-ms-input-placeholder {
+    color: #72808b;
+}
+
+.inputContainer .icon {
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 17px;
+    z-index: 1;
+    color: #67747e;
+}
+
+.inputContainer input#search:focus,
+.inputContainer input#search:active {
+    outline: none;
+    width: 300px;
+}
+
+.inputContainer:hover input#search {
+    width: 300px;
+}
+
+.inputContainer:hover .icon {
+    color: #93a2ad;
+}
+
+/* Search Bar end */
+
+#hidden {
+    display: none;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    height: 90vh;
+}
+
+#container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #276a9e;
+    width: 700px;
+    border: 1px solid #274444;
+    border-radius: 4px;
+    opacity: .9;
+    height: 390px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#topInfo {
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+    margin-left: 110px;
+    height: 220px;
+}
+
+#sideInfo {
+    margin: 82px 60px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+#cityNameContainer {
+    margin-top: inherit;
+}
+
+#cityNameContainer h1 {
+    font-weight: 500;
+    font-size: 55px;
+    margin-bottom: 2px;
+    margin-top: 50px;
+}
+
+#cityNameContainer h2 {
+    font-weight: 500;
+    font-size: 45px;
+    margin-top: 0;
+}
+
+.hr {
+    width: 500px;
+    background-color: #090936;
+}
+
+#bottomSection h1 {
+    margin-left: 110px;
+    margin-top: 9px;
+    display: flex;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+#switch {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+    color: #86868d;
+}
+
+#switch:hover {
+    color: #b7b7ce;
+}
+
+
+#backgroundVideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
