@@ -34,21 +34,21 @@ const clearWeather = () => {
 
 }
 const rainyWeather = () => {
-    document.body.style.backgroundImage = 'url("imgs/rainStopper.jpg")';
+    document.body.style.backgroundImage = 'url("/imgs/rainStopper.jpg")';
     container.style.backgroundColor = '#323b42'
     container.style.color = '#fff'
     input.style.color = '#fff'
     input.style.backgroundColor = '#323b42'
 }
 const thunderstormWeather = () => {
-    document.body.style.backgroundImage = 'url("imgs/thunder.jpg")';
+    document.body.style.backgroundImage = 'url("/thunder.jpg")';
     container.style.backgroundColor = '#323b42'
     container.style.color = '#fff'
     input.style.color = '#fff'
     input.style.backgroundColor = '#323b42'
 }
 const snowWeather = () => {
-    document.body.style.backgroundImage = 'url("imgs/snowing.jpg")';
+    document.body.style.backgroundImage = 'url("./imgs/snowing.jpg")';
     container.style.backgroundColor = '#276a9e'
     input.style.backgroundColor = '#559ed6'
     input.style.color = '#323b42'
