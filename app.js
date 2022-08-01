@@ -34,21 +34,28 @@ const clearWeather = () => {
 
 }
 const rainyWeather = () => {
-    document.body.style.backgroundImage = 'url("/imgs/rainStopper.jpg")';
+    document.body.style.backgroundImage = 'url("imgs/rainStopper.jpg")';
     container.style.backgroundColor = '#323b42'
     container.style.color = '#fff'
     input.style.color = '#fff'
     input.style.backgroundColor = '#323b42'
 }
 const thunderstormWeather = () => {
-    document.body.style.backgroundImage = 'url("/thunder.jpg")';
+    document.body.style.backgroundImage = 'url("imgs/thunder.jpg")';
     container.style.backgroundColor = '#323b42'
     container.style.color = '#fff'
     input.style.color = '#fff'
     input.style.backgroundColor = '#323b42'
 }
 const snowWeather = () => {
-    document.body.style.backgroundImage = 'url("./imgs/snowing.jpg")';
+    document.body.style.backgroundImage = 'url("imgs/snowing.jpg")';
+    container.style.backgroundColor = '#276a9e'
+    input.style.backgroundColor = '#559ed6'
+    input.style.color = '#323b42'
+    container.style.color = '#fff'
+}
+const cloudyWeather = () => {
+    document.body.style.backgroundImage = 'url("imgs/clouds.jpg")';
     container.style.backgroundColor = '#276a9e'
     input.style.backgroundColor = '#559ed6'
     input.style.color = '#323b42'
@@ -70,8 +77,10 @@ async function getWeather() {
         rainyWeather();
     } else if (weatherData.weather[0].main === 'Thunderstorm') {
         thunderstormWeather();
-    } else if (weatherData.weather[0].main === 'Snow') {
-        snowWeather();
+    } else if (weatherData.weather[0].main === 'Clouds') {
+        cloudyWeather();
+    } else{
+        document.body.style.backgroundImage = 'url("imgs/sunnyFlowers.jpg")';
     }
 
     let weatherIcon = `http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`
@@ -97,6 +106,10 @@ async function searchLocation() {
         rainyWeather();
     } else if (weatherData.weather[0].main === 'Thunderstorm') {
         thunderstormWeather();
+    } else if (weatherData.weather[0].main === 'Clouds') {
+        cloudyWeather();
+    } else{
+        document.body.style.backgroundImage = 'url("imgs/sunnyFlowers.jpg")';
     }
 
     let weatherIcon = `http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`
